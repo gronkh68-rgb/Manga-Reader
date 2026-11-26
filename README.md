@@ -3,7 +3,8 @@
 Offline-fähiger Manga-/Webtoon-Reader für das Handy (PWA). Eine HTML-Datei, keine Abhängigkeiten, keine Server-Anbindung.
 
 - Öffnet **CBZ**, **ZIP**, **PDF** und einzelne Bilder (JPG, PNG, WebP, GIF, AVIF)
-- Bibliothek mit Cover und Lesefortschritt, alles bleibt lokal im Browser des Geräts
+- **Bücherregal** mit Covern, Fortschrittsbalken und „Weiterlesen“-Karte; sortierbar (zuletzt gelesen, Titel, hinzugefügt); alles bleibt lokal im Browser des Geräts
+- Merkt sich pro Buch Seite, Position auf der Seite, Modus, Leserichtung und Passung (Pinch-Zoom wird nicht gespeichert)
 - Seitenmodus (R→L oder L→R, Passend/Breite) und Scroll-Modus für Webtoons
 - Tippen oder Wischen zum Blättern, Slider, Vollbild
 
@@ -15,7 +16,7 @@ Offline-fähiger Manga-/Webtoon-Reader für das Handy (PWA). Eine HTML-Datei, ke
 GitHub → Settings → Pages → Branch `main`, Ordner `/ (root)`.
 
 ## Aktualisieren
-Nach Änderungen an `index.html` in `sw.js` die Konstante `CACHE` hochzählen (`manga-reader-v3` …), sonst liefert der Offline-Cache die alte Version.
+Nach Änderungen an `index.html` in `sw.js` die Konstante `CACHE` hochzählen (`manga-reader-v4` …), sonst liefert der Offline-Cache die alte Version.
 
 Nicht unterstützt: CBR/RAR, ZIP64 (Archive über 4 GB), Doppelseiten nebeneinander.
 
