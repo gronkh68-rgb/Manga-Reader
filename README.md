@@ -15,8 +15,14 @@ Offline-fähiger Manga-/Webtoon-Reader für das Handy (PWA). Eine HTML-Datei, ke
 ## Hosting
 GitHub → Settings → Pages → Branch `main`, Ordner `/ (root)`.
 
+## Version und Updates
+Oben neben dem Titel steht die Version (z. B. `v6`). Ein Tipp darauf sucht nach Updates. Sobald eine neue Version bereitsteht, erscheint unten „Neue Version verfügbar“ mit Knopf „Aktualisieren“. Die Prüfung läuft beim Öffnen der App und alle 30 Minuten.
+
+## Einzeldatei
+`python3 build-einzeldatei.py` erzeugt `mangareader.html`: eine Datei mit eingebettetem pdf.js, läuft per Doppelklick ohne Webadresse. Sie hat keine automatischen Updates.
+
 ## Aktualisieren
-Die App holt Seiten zuerst aus dem Netz, Updates kommen also beim nächsten Start. Wenn sich pdf.js ändert, in `sw.js` die Konstante `CACHE` hochzählen (`manga-reader-v6` …), sonst liefert der Offline-Cache die alte Version.
+Bei jedem Release in `sw.js` die Konstante `CACHE` hochzählen (`manga-reader-v7` …) und in `index.html` `APP_VERSION` sowie die Anzeige `v6` im Header (`#ver`) anpassen. Das hochgezählte `sw.js` löst bei den Handys den „Neue Version verfügbar“-Hinweis aus. In `build-einzeldatei.py` die Dateiversion mitziehen.
 
 Nicht unterstützt: CBR/RAR, ZIP64 (Archive über 4 GB), Doppelseiten nebeneinander.
 
