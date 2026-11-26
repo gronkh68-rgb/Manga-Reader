@@ -16,7 +16,7 @@ Offline-fähiger Manga-/Webtoon-Reader für das Handy (PWA). Eine HTML-Datei, ke
 GitHub → Settings → Pages → Branch `main`, Ordner `/ (root)`.
 
 ## Aktualisieren
-Nach Änderungen an `index.html` in `sw.js` die Konstante `CACHE` hochzählen (`manga-reader-v4` …), sonst liefert der Offline-Cache die alte Version.
+Die App holt Seiten zuerst aus dem Netz, Updates kommen also beim nächsten Start. Wenn sich pdf.js ändert, in `sw.js` die Konstante `CACHE` hochzählen (`manga-reader-v6` …), sonst liefert der Offline-Cache die alte Version.
 
 Nicht unterstützt: CBR/RAR, ZIP64 (Archive über 4 GB), Doppelseiten nebeneinander.
 
